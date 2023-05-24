@@ -1,0 +1,41 @@
+@import 'reset';
+@import 'vars';
+@import 'mixin';
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 1.4rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    background-color: #c8c2c2;
+}
+.all{
+    overflow: hidden;
+}
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    @include breakpoint($container-bp){
+        padding: 0 50px;
+    }
+}
+@import 'header';
+@import 'main-pg';
+@import 'btn';
+@import 'products';
+@import 'promo';
+@import 'stats';
+@import 'about';
+@import 'contact';
+@import 'footer';

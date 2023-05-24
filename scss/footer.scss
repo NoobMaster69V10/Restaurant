@@ -1,0 +1,115 @@
+.footer{
+    padding: 150px 0;
+    background-color: #303030;
+}
+.footer_inner{
+    display: flex;
+    justify-content: space-between;
+    @include breakpoint($tablet-bp){
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    } 
+}
+.footer_left_item{
+    width: 35%;
+    color: #fff;
+    h1{
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    div{
+        line-height: 1.5;
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+       
+    }
+    @include breakpoint($tablet-bp){
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 50%;
+    } 
+    @include breakpoint($mobile-bp){
+        width: 80%;
+    } 
+}
+
+.footer_social{
+    display: flex;
+    li:not(:last-child){
+        margin-right: 15px;
+    }
+}
+.footer_social_link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: background-color .2s ease;
+    &:hover{
+        background-color: darken(#fff, 30%);
+    }
+    &:hover .footer_social_icon{
+        fill: lighten(#333333, 30%);
+    }
+    
+}
+.footer_social_icon{
+    width: 60%;
+    height: 60%;
+    fill: #333333;
+    transition: fill .2s ease;
+}
+.footer_right_item{
+    display: flex;
+    justify-content: space-between;
+    width: 55%;
+    @include breakpoint($mobile-bp){
+        flex-direction: column;
+        align-items: center;      
+    } 
+    div{
+        display: flex;
+        flex-direction: column;
+        width: 33%;
+        color: #fff;
+        h1{
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        a{
+            font-size: 1.6rem;
+            color: darken(#fff, 20%);
+            transition: color .2s ease;
+            &:not(:last-child){
+                margin-bottom: 10px;
+            }
+            &:hover{
+                color: #fff;
+            }
+        }
+        @include breakpoint($tablet-bp){
+            text-align: center;
+        } 
+        @include breakpoint($mobile-bp){
+            &:not(:last-child){
+                margin-bottom: 30px;
+            }  
+        } 
+        
+    }
+    @include breakpoint($tablet-bp){
+        width: 100%;
+        justify-content: center;
+    } 
+}

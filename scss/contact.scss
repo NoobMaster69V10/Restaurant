@@ -1,0 +1,59 @@
+.contact{
+    padding-top: 150px;
+    background: url(../img/contact/contact-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+}
+.contact_inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #333333;
+    h1{
+        font-size: 8rem;
+        font-family: 'Grand Hotel', cursive;
+    }
+    h3{
+        font-size: 2.5rem;
+        width: 70%;
+        line-height: 1.5;
+        margin: 10px 0 50px 0;
+    }
+}
+.contact_input{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    box-shadow: 2px 2px 20px #b0b0b0;
+    border-radius: 5px;
+    overflow: hidden;
+    input{
+        width: 60%;
+        padding-left: 10px;
+        &::placeholder{
+            text-transform: capitalize;
+            color: lighten(#333333, 30%);
+            font-size: 1.5rem;
+            @include breakpoint($mobile-bp){
+                font-size: .9rem;
+                letter-spacing: 0.2px;
+                padding: 0;
+            }
+        }
+    }
+    button{
+        width: 30%;
+        border-radius: 0;
+        @include breakpoint($mobile-bp){
+            font-size: .9rem;
+            letter-spacing: 0.2px;
+            padding: 0;
+        }
+    }
+    @include breakpoint($mobile-bp){
+        width: 100%;
+    }
+}

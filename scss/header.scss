@@ -1,0 +1,152 @@
+.header{
+    position: absolute;
+    width: 100%;
+}
+.header_inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    @include breakpoint($mobile-bp){
+        justify-content: center;
+    }
+}
+.header_logo{
+    width: 40px;
+    height: 40px;  
+    &:hover .header_icon{
+        fill: darken(#fff, 30%);
+    }
+}
+.header_icon{
+    width: 100%;
+    height: 100%;
+    fill: #fff;
+    transition: fill .2s ease;
+}
+.nav{
+    position: relative;
+    height: 100%;
+    @include breakpoint($mobile-bp){
+        display: flex;
+        position: absolute;
+        top: -300px;
+        width: 100%;
+        background-color: #b0b0b0;
+        flex-direction: column;
+        height: 300px;
+        transition: top 1s ease;
+        &.active{
+            top: 0;
+        }
+    }
+}
+.nav_inner{
+    display: flex;
+    height: 100%;
+    @include breakpoint($mobile-bp){
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    } 
+}
+.nav_item{
+    display: flex;
+    align-items: center;
+    &:not(:last-child){
+        margin-right: 20px;
+    }
+    @include breakpoint($mobile-bp){
+        margin: 0;
+    } 
+    @include breakpoint($mobile-bp){
+        &:last-child{
+            margin-top: 10px;
+        }
+    } 
+}
+.nav_link{
+    padding: 10px 20px;
+    text-transform: capitalize;
+    color: #fff;
+    transition: color .2s ease;
+    font-size: 1.6rem;
+    &:hover{
+        color: darken(#fff, 30%); 
+    }
+}
+.nav_search_btn{
+    width: 25px;
+    height: 25px;
+    &:hover .nav_search_icon{
+        fill: darken(#fff, 30%); 
+    }
+}
+.nav_search_icon{
+    width: 100%;
+    height: 100%;
+    fill: #fff;
+    transition: fill .2s ease;
+    @include breakpoint($mobile-bp){
+        margin-left: 10px;
+    } 
+}
+.nav_search_input{
+    display: none;
+    input{
+        max-width: 200px;
+        width: 100%;
+        background-color: darken(#b0b0b0, 20%);
+        padding: 5px 0 5px 5px;
+        border-radius: 5px;
+    }
+    @include breakpoint($mobile-bp){
+        display: block;
+    } 
+}
+.nav_input{
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: -15px;
+    color: #fff;
+    padding: 10px 0;
+    input{
+        max-width: 200px;
+        width: 100%;
+        background-color: #b0b0b0;
+        padding: 5px 0 5px 5px;
+        border-radius: 5px;
+    }
+    &.active{
+        display: block;
+    }
+    @include breakpoint($tablet-bp){
+        display: none;
+    }  
+    @include breakpoint($mobile-bp){
+        display: none;
+    }  
+}
+
+.header_menu{
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    &:hover .header_menu_icon{
+        fill: darken(#fff, 20%);
+    }
+    @include breakpoint($mobile-bp){
+        display: block;
+    } 
+}
+.header_menu_icon{
+    width: 100%;
+    height: 100%;
+    fill: #fff;
+    transition: fill .2s ease;
+}

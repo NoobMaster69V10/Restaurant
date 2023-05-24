@@ -1,0 +1,63 @@
+.products{
+    padding: 100px 0;
+}
+.products_content{
+    text-align: center;
+    color: #333333;
+    margin-bottom: 80px;
+    h1{
+        font-family: 'Grand Hotel', cursive;
+        font-size: 5rem;
+        margin-bottom: 20px;
+    }
+    h3{
+        font-size: 1.8rem;
+        width: 50%;
+        line-height: 1.5;
+        margin: 0 auto;
+    }
+}
+.products_inner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include breakpoint($tablet-bp){
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.products_item{
+    padding: 0 50px;
+    width: 30%;
+    text-align: center;
+    color: #333333;
+    img{
+        width: 60%;
+    }
+    h1{
+        font-family: 'Grand Hotel', cursive;
+        font-size: 3rem;
+        margin: 20px 0;
+    }
+    h6{
+        font-size: 1.6rem;
+        padding: 0 10px;
+        line-height: 1.5;
+        @include breakpoint($tablet-bp){
+            width: 60%;
+            margin: 0 auto; 
+            text-align: center;
+            padding: 0;
+        }
+    }
+    @include breakpoint($tablet-bp){
+        width: 80%;
+        &:not(:last-child){
+            margin-bottom: 80px;
+        }
+    }
+    @include breakpoint($mobile-bp){
+        width: 100%; 
+    }
+}

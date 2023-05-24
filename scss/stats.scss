@@ -1,0 +1,64 @@
+.stats{
+    background: url(../img/stats/stats_bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;   
+    padding: 100px 0;
+    @include breakpoint($tablet-bp){
+        height: 1500px;
+    }
+}
+.stats_content{
+    text-align: center;
+    margin-bottom: 80px;
+    h1{
+        color: #ffc200;
+        font-family: 'Grand Hotel', cursive;
+        font-size: 5rem;
+        margin-bottom: 20px;
+    }
+    h3{
+        color: #fff;
+        font-size: 1.8rem;
+        width: 50%;
+        line-height: 1.5;
+        margin: 0 auto;
+    }
+}
+.stats_inner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include breakpoint($tablet-bp){
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.stats_item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    h1{
+        font-weight: 700;
+        font-size: 4rem;
+        color: #ffc200;
+        margin-bottom: 10px;
+    }
+    h3{
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 2.5rem;
+        color: #fff;    
+    }
+    @include breakpoint($tablet-bp){
+        &:not(:last-child){
+            margin-bottom: 50px;
+        }
+    }
+}

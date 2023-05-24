@@ -1,0 +1,10 @@
+.products {
+  padding: 100px 0;
+}
+
+.products_content {
+  text-align: center;
+}
+.products_content h1 {
+  color: red;
+}
